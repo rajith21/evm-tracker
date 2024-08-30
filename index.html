@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVM Tracker</title>
+    <style>
+     .style_headings {
+        text-align: center;
+        font-size: xx-large;
+      }
+
+      .style_body {
+        font-size: larger;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="style_headings">
+        <h1> EVM Tracker - Texas Instruments </h1>
+    </div>
+    
+    <div class="style_body">
+        <form action="/submit_data" method="post">
+            <label for="person_name">Name : </label>
+            <input 
+                type="text"
+                id="person_name"
+                name="person_name"
+            /> <br /> <br />
+    
+            <label for="aid">AID : </label>
+            <input 
+                type="text"
+                id="aid"
+                name="aid"
+            /> <br /> <br />
+    
+            <label for="cubicle_number">Cubicle Number : </label>
+            <input 
+                type="text"
+                id="cubicle_number"
+                name="cubicle_number"
+            /> <br /> <br />
+    
+          <p>Select EVM : </p>
+          <input 
+            type="radio" 
+            id="j721e_evm" 
+            name="evm_name" 
+            value="j721e_evm" 
+          />
+          <label for="j721e_evm">j721e_evm</label> <br />
+          <input
+            type="radio"
+            id="j721e_hs_evm"
+            name="evm_name"
+            value="j721e_hs_evm"
+          />
+          <label for="j721e_hs_evm">j721e_hs_evm</label> <br />
+          <input
+            type="radio"
+            id="j721e_hsfs_evm"
+            name="evm_name"
+            value="j721e_hsfs_evm"
+          />
+          <label for="j721e_hsfs_evm">j721e_hsfs_evm</label> <br /> <br />
+    
+          <label for="evm_serial_number">EVM Serial Number : </label>
+          <input 
+              type="text"
+              id="evm_serial_number"
+              name="evm_serial_number"
+          /> <br /> <br />
+
+          <input type="submit" value="Submit">
+    
+        </form>
+    </div>
+
+    <script src="api/server.js"></script>
+
+</body>
+</html>
